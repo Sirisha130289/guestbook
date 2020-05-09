@@ -29,13 +29,6 @@ public class guestbookservlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-//        // JDBC driver name and database URL
-////        static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-//        static final String DB_URL="jdbc:mariadb://noelvaes.eu/StudentDB";
-//
-//        //  Database credentials
-//        static final String USER = "student";
-//        static final String PASS = "student123";
 
         MessageDao messageDao = new MessageDao();
 
@@ -123,30 +116,6 @@ public class guestbookservlet extends HttpServlet {
 
         resp.getWriter().println("Successfully inserted message to DB");
     }
-    //    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        resp.setContentType("text/html");
-//        resp.setCharacterEncoding("UTF-8");
-//
-//        String name = req.getParameter("name") != null && !"".equals(req.getParameter("name")) ? req.getParameter("name") : "Guest";
-//
-//        PrintWriter writer = resp.getWriter();
-//        writer.println("<html lang=\"en\">\n" +
-//                "<head>\n" +
-//                "    <meta charset=\"UTF-8\">\n" +
-//                "    <title>getservlet</title>\n" +
-//                "</head>\n" +
-//                "<body>\n" +
-//                "<h1>" + "hello " +
-//                name +
-//                "<br></br>" + " You reached the POST Servlet" + "<br></br>" +
-//                " <a href='getservlet'>Back to the GET Servlet</a>" +
-//                "<br></br>" +
-//                "  <input type=\"submit\" value=\"back to the GET Servlet\">\n"
-//                + "</h1>\n" +
-//                "</body>\n" +
-//                "</html>");
-//        writer.close();
-//    }
+
 }
 
